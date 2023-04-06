@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La questin XXXXXXXXXXX"
+            android:layout_gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/BoutonA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Réponse A"/>
+            <RadioButton
+                android:id="@+id/BoutonB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Réponse B"/>
+            <RadioButton
+                android:id="@+id/BoutonC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Réponse C"/>
+            <RadioButton
+                android:id="@+id/BoutonD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Réponse D"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La Réponse est : XXXXXXXXXXX"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/Valider"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Valider ma Réponse"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:onClick="validate"/>
+
+        <Button
+            android:id="@+id/Precedente"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Question précédente"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:onClick="precedent"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
