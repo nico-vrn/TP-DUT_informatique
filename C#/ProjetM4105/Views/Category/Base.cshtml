@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>Categories</h2>
+<div id="CategoryMenu" style="text-align: center">
+    <article>
+        <img src="@Url.Content("~/Content/Images/entree.png")" alt="une entrée" />
+        <h3>@Html.ActionLink("Entrées", "ListPlats", "Plats", new { id = 0 }, null)</h3>
+
+    </article>
+
+    <article>
+        <img src="@Url.Content("~/Content/Images/plat.png")" alt="un plat" />
+        <h3>@Html.ActionLink("Plats", "ListPlats", "Plats", new { id = 1 }, null)</h3>
+
+    </article>
+
+    <article>
+        <img src="@Url.Content("~/Content/Images/dessert.png")" alt="un dessert" />
+        <h3>@Html.ActionLink("Desserts", "ListPlats", "Plats", new { id = 2 }, null)</h3>
+    </article>
+
+    <article>
+        <img src="@Url.Content("~/Content/Images/boisson.png")" alt="une langouste" />
+        <h3>@Html.ActionLink("boisson", "ListPlats", "Plats", new {id=3}, null)</h3>
+    </article>
+ </div>

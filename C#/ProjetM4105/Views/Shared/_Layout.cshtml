@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Les restaurants", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("modification of dishes", "Allplats", "Plats")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("ShoppingCart", "Index", "ShoppingCart")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="top">
+                <div>
+                    <div>
+                        <h4>Where to find us ?</h4>
+                        <a href="https://goo.gl/maps/8VgGeTVDbF5LmKCYA">
+                            <span>&#128204;</span> Val Thorens Tourist Office</p>
+                            Maison de Val Thorens, Grande Rue, 73440 Val Thorens
+                        </a>
+                            <p><span>&#9742;</span> <a href="tel:0479000808">04 79 00 08 08</a></p>
+                    </div>
+                </div>
+            </div><!--
+            <div class="bottom">
+                <div class="bar">
+                    <p>Horaires</p>
+                    <p>Ouvert du lundi au dimanche</p>
+                    <p>de 8h45 à 19h00</p>
+                </div>
+                <div class="restaurant">
+                    <p>Region</p>
+                    <p>Domaine skiable des 3 Vallées</p>
+                    <p>Département de Savoie</p>
+                </div>
+            </div>-->
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

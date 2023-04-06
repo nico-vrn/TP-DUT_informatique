@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ProjetM4105.Data.Models.Plats>
+
+@{
+    ViewBag.Title = "AllPlats";
+}
+
+<h2>AllPlats</h2>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PlatID }) |
+                @Html.ActionLink("Details", "PlatsDetails", new { id = item.PlatID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PlatID })
+            </td>
+        </tr>
+    }
+</table>
+<p class="button">
+    @Html.ActionLink("Create New", "Create")
+</p>

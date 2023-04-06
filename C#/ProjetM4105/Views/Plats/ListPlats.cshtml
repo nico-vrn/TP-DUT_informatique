@@ -1,0 +1,34 @@
+﻿@model ProjetM4105.Models.DishCategory
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+<h2>@Model.Name</h2>
+
+<section>
+    <div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Entrées", "ListPlats/0", "Plats")</li>
+                <li>@Html.ActionLink("Plats", "ListPlats/1", "Plats")</li>
+                <li>@Html.ActionLink("Boissons", "ListPlats/2", "Plats")</li>
+                <li>@Html.ActionLink("Desserts", "ListPlats/3", "Plats")</li>
+            </ul>
+        </div>
+        @foreach (var category in Model.Dishes)
+        {
+            <h4 class="panel-heading">@category.PlatID : @category.PlatName</h4>
+            <a href="/Plats/PlatsDetails/@category.PlatID">
+            <img src="@Url.Content(@category.ImagePath)" alt="@category.ImagePath" height="20%" width="20%" /></a>
+            
+            <div class="panel-body text-primary">
+                Prix : @category.UnitPrice €
+            </div>
+            <p>@Html.ActionLink("Details", "PlatsDetails", new { id = category.PlatID }) </p>
+            <p class="button">
+                @Html.ActionLink("Add tocart", "AddToCart","ShoppingCart", new { id = category.PlatID }, "")
+            </p>
+        }
+    </div>
+</section>

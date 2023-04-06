@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProjetM4105.Data.Models.Order>
+@{
+    ViewBag.Title = "AllOrders";
+}
+
+    <h2>AllOrders</h2>
+
+    <table>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                Order n° :
+                @Html.DisplayFor(modelItem => item.OrderID)&nbsp
+            </td>
+            <td>
+                Your FirstName :
+                @Html.DisplayFor(modelItem => item.FirstName)&nbsp
+            </td>
+            <td>
+                Your LastName :
+                @Html.DisplayFor(modelItem => item.LastName)&nbsp
+            </td>
+            <td>
+                Your Adress :
+                @Html.DisplayFor(modelItem => item.Address)&nbsp
+            </td>
+            <td>
+                your Phone :
+                @Html.DisplayFor(modelItem => item.Phone)&nbsp
+            </td>
+            <td>
+                your Email :
+                @Html.DisplayFor(modelItem => item.Email)&nbsp
+            </td>
+
+        </tr>
+        }
+    </table>

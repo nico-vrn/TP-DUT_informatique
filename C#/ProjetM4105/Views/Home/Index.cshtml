@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Les restaurants";
+}
+
+<div class="jumbotron">
+    <h1>Tourist Office</h1>
+    <p class="lead">On this site, the Val Thorens tourist office has the honor of presenting these favorite restaurants and their menus.</p>
+    <p><a href="https://www.valthorens.com/fr/pages/office-de-tourisme-de-val-thorens" class="btn btn-primary btn-lg">Our Website &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div id="CategoryMenu" style="text-align: center">
+        <article>
+             
+            <img src="@Url.Content("~/Content/Images/chaletAlpage.jpg")" alt="chalet Alpage" />
+            <h3>@Html.ActionLink("l'Alpage", "Base", "Category")</h3>
+            <p><span>Address : </span>Piste du mont de la Chambre, 73440 Les Menuires</p>
+            <p><span>phone number : </span> <a href="tel:+33479007516">+33 4 79 00 75 16</a> </p>
+            <h6>Ratings : 4,55/5 </h6>
+
+        </article>
+
+        <article>
+            <img src="@Url.Content("~/Content/Images/chalet2lacs.jpg")" alt="chalet 2 lacs" />
+            <h3>@Html.ActionLink("Chalet des 2 lacs", "Base", "Category")</h3>
+            <p><span>Address : </span>Télésiège 2 lacs, 73440 Val Thorens</p>
+            <p><span>phone number : </span> <a href="tel:+33479002854">+33 4 79 00 28 54</a></p>
+            <h6>Ratings : 4/5</h6>
+
+        </article>
+
+        <article>
+            <img src="@Url.Content("~/Content/Images/PepeNicolas.jpg")" alt="Pepe Nicolas" />
+            <h3>@Html.ActionLink("Pepe Nicolas", "Base", "Category")</h3>
+            <p><span>Address : </span>Piste de la Chasse, 73440 Val Thorens</p>
+            <p><span>phone number : </span><a href="tel:+ +33609452835"> +33 6 09 45 28 35</a></p>
+            <h6>Ratings : 5/5 </h6>
+        </article>
+    </div>
+</div>

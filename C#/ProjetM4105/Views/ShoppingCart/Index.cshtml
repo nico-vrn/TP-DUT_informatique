@@ -1,0 +1,69 @@
+﻿@model ProjetM4105.ViewModels.ShoppingCartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+<h3>
+    <em>Review</em> your cart:
+</h3>
+<p class="button">
+    @Html.ActionLink("Checkout", "CreateOrder", "ShoppingCart")
+</p>
+<div id="update-message">
+</div>
+<table>
+    <tr>
+        <th>
+            Plat Name &nbsp
+        </th>
+        <th>
+            Price (each) &nbsp
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.CartItems)
+    {
+        <tr id="row-@item.RecordId">
+            <td>
+                @Html.ActionLink(item.Plats.PlatName, "PlatsDetails", "Plats", new { id = item.PlatID }, null)
+            </td>
+            <td>
+                @item.Plats.UnitPrice
+            </td>
+            <td id="item-count-@item.RecordId">
+                @item.Count
+            </td>
+            <td>
+                <!--add 1 element to shoppingcart-->
+                <p class="button">
+                    @Html.ActionLink("add 1", "AddToCart", "ShoppingCart", new { id = item.PlatID }, "")  &nbsp
+                </p>
+            </td>
+            <td>
+                <!-- remove 1 element to shoppingcart -->
+                <p class="button">
+                    @Html.ActionLink("remove 1", "RemoveFromCart", "ShoppingCart", new { id = item.PlatID }, "")
+            </td>
+        </tr>
+    }
+    <tr>
+        <td>
+            Total
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td id="cart-total">
+            @Model.CartTotal
+        </td>
+    </tr>
+</table>
+<p>
+    @Html.ActionLink("back to categories", "Base", "Category")
+</p>
+<p>
+    @Html.ActionLink("Delete my cart", "EmptyAllCart", "ShoppingCart")
+</p>
