@@ -1,0 +1,18 @@
+# Fichiers générés par la compilation
+*.o
+*.out
+*.exe
+
+# Fichiers générés par l'éditeur de texte
+*~
+
+# Fichiers de dépendances
+.depend
+
+# Fichiers générés par CMake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
+# Fichiers générés par l'outil de documentation Doxygen
+doc/
