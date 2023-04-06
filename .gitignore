@@ -16,3 +16,23 @@ Makefile
 
 # Fichiers générés par l'outil de documentation Doxygen
 doc/
+
+# Fichiers générés par la compilation
+bin/
+obj/
+
+# Fichiers de sauvegarde
+[Oo]bj/
+[Bb]in/
+*.user
+*.suo
+*.vs/
+*.vscode/
+
+# Fichiers temporaires
+[Tt]emp/
+[Oo]ut/
+
+# Fichiers de log
+*.log
+*.txt
