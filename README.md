@@ -1,13 +1,28 @@
 # Mon repo pour quelques TP en DUT informatique 
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/nico-vrn/TP-DUT_informatique">
+    <img src="images/logo.png" alt="Logo" width="100" height="80">
+  </a>
+
+  <h3 align="center">TP Dut Informatique</h3>
+
+  <p align="center">
+    quelques TP du DUT informatique
+    <br />
+   </p>
+</div>
+
 Ce repo est destiné à stocker quelques'un des TP que j'ai réalisé dans différentes matières en DUT informatique à Grenoble. Il est organisé en sous-dossiers correspondant à chaque matière.
 
-# Organisation du repo
+## Organisation du repo
 Le repo est organisé en sous-dossiers, chacun correspondant à une matière. Les noms des sous-dossiers sont clairs et explicites, afin de faciliter la navigation.
 
 Dans chaque sous-dossier, il y a un README spécifique qui présente les TP correspondants à cette matière. Les noms des fichiers et des dossiers sont également clairs et explicites.
 
-# Les TP
+## Les TP
 Les TP sont des exercices pratiques qui me permettent de mettre en application les connaissances acquises en cours. Chaque TP est accompagné d'un énoncé qui décrit l'objectif à atteindre et les consignes à respecter.
 
 Les technologies utilisées
@@ -20,11 +35,11 @@ SQL
 HTML/CSS
 JavaScript
 
-# Contribution
+## Contribution
 Ce repo est destiné à un usage personnel, mais il est également possible de contribuer en proposant des améliorations ou des corrections. Si vous souhaitez contribuer, n'hésitez pas à me contacter pour discuter des modifications à apporter.
 
-# Licence
+## Licence
 Ce repo est sous licence MIT. Cela signifie que vous êtes libre de l'utiliser, de le modifier et de le redistribuer, à condition de mentionner l'auteur et de conserver la licence MIT.
 
-# Auteur
+##Auteur
 Ce repo a été créé par Lefranc Nicolas.
